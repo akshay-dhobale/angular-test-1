@@ -1,3 +1,9 @@
+<div>
+  <a routerLink="/about" routerLinkActive="active">
+      <button>ABOUT</button>
+    </a>
+</div>
+
 <h1>
   {{name}} {{work}} works!
 </h1>
@@ -22,13 +28,8 @@
 
 <h3>Posts </h3>
 <div *ngFor="let post of posts">
-  <h5>
-    {{post.title}}sadsadsa
-  </h5>
-  <p>
-    {{post.body}}
-  </p>
-
+  <h5>{{post.title | uppercase}}</h5>
+  <p>{{post.body}}</p>
 </div>
 <button (click) = 'onClick()'>Start Work</button>
 <h4>Other </h4>
